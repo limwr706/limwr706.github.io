@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps & Cloud Engineering Blog</title>
+    
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<div class="container">
+    <main class="main-content">
+        
+        <div class="card-container">
+            <div class="foil-card" id="profileCard">
+                <div class="card-title">Cloud / DevOps Engineer</div>
+                <div class="card-name">Lim Wan-ryeol</div>
+                <div class="card-desc">
+                    Cloud Wave 7th<br>
+                    AWS Certified Solutions Architect (SAA-C03)<br>
+                    SAP STAR Program Applicant
+                </div>
+            </div>
+        </div>
+
+        <h1>인프라 아키텍처 구성 및 CI/CD 파이프라인 구축기</h1>
+        <p>최근 진행한 프로젝트에서 안정적인 리소스 관리와 워크로드 스케줄링을 위해 AWS 환경을 구성했습니다.</p>
+        
+        <h2>1. AWS VPC 및 서브넷 설계</h2>
+        <p>퍼블릭 서브넷과 프라이빗 서브넷을 분리하여 보안을 강화했습니다.</p>
+
+        <h2>2. Terraform을 이용한 IaC 구축</h2>
+        <p>인프라를 코드로 관리하기 위해 테라폼을 도입했습니다. 아래는 주요 설정 코드입니다.</p>
+        <pre><code>resource "aws_instance" "web" {
+  ami           = "ami-0c55b159cbfafe1f0"
+  instance_type = "t3.micro"
+
+  tags = {
+    Name = "DevOps-Web-Server"
+  }
+}</code></pre>
+
+    </main>
+
+    <aside class="sidebar">
+        <div class="toc">
+            <h3>목차 (TOC)</h3>
+            <ul>
+                <li>1. AWS VPC 및 서브넷 설계</li>
+                <li>2. Terraform을 이용한 IaC 구축</li>
+                <li>3. CI/CD 파이프라인 적용</li>
+                <li>4. 마무리 및 회고</li>
+            </ul>
+        </div>
+    </aside>
+</div>
+
+<script src="./images/script.js" defer></script>
+</body>
+</html>
